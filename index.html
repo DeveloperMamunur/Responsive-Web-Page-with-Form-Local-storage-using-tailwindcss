@@ -7,8 +7,70 @@
     <link rel="stylesheet" href="./public/css/styles.css"/>
 </head>
 <body>
-    <h1 class="text-4xl font-bold text-red-500 text-center">Hello World</h1>
+    <!-- Navigation Section -->
+    <header class="bg-slate-900/90 text-white shadow-md sticky top-0 z-50">
+        <nav class="container flex justify-between items-center mx-auto px-4 py-5">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold">T<span class="text-orange-600">RAVEL</span></a>
+            </div>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-300 transition">Home</a>
+                <a href="#" class="hover:text-blue-300 transition">Services</a>
+                <a href="#" class="hover:text-blue-300 transition">About</a>
+                <a href="#" class="hover:text-blue-300 transition">Contact</a>
+            </div>
+            
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <div class="hidden md:hidden container w-full bg-slate-800 py-2 px-4 mx-auto" id="mobile-menu">
+            <a href="#" class="block py-2 hover:bg-slate-700 rounded transition">Home</a>
+            <a href="#" class="block py-2 hover:bg-slate-700 rounded transition">Services</a>
+            <a href="#" class="block py-2 hover:bg-slate-700 rounded transition">About</a>
+            <a href="#" class="block py-2 hover:bg-slate-700 rounded transition">Contact</a>
+        </div>
+    </header>
+    <main>
 
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-6">
+                <div class="xl:col-span-2 space-y-4">
+                    <h2 class="text-lg font-bold mb-4">About Us</h2>
+                    <div class="inline-flex gap-3">
+                        <img src="./public/images/about.jpg" class="w-[150px] h-auto object-cover rounded-lg" alt="About Us">
+                        <p class="max-w-[250px]">We are a travel agency dedicated to providing the best travel experiences. We are a travel agency dedicated to providing the best travel experiences</p>
+                    </div>
+                </div>
+                <div class="xl:col-span-3 grid lg:grid-cols-2 gap-6">
+                    <div class="space-y-3 mb-6">
+                        <h2 class="text-lg font-bold">Contact Us</h2>
+                        <p>Email: info@travelagency.com</p>
+                        <p>Phone: +1 234 567 890</p>
+                        <p>Address: 123 Travel St, City, Country</p>
+                    </div>
+                    <div class="">
+                        <h2 class="text-lg font-bold mb-4">Follow Us</h2>
+                        <div class="flex gap-4">
+                            <a href="#" class="hover:text-blue-300 transition">Facebook</a>
+                            <a href="#" class="hover:text-blue-300 transition">Twitter</a>
+                            <a href="#" class="hover:text-blue-300 transition">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 text-center border-t border-slate-500 mt-6 pt-4">
+            <p>&copy; 2025 Md Mamunur Rashid. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="./src/js/index.js"></script>
 </body>
