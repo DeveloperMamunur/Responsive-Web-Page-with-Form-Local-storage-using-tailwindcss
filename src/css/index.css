@@ -16,3 +16,14 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+
+.success-message {
+    display: none;
+}
+
+.form-error {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
