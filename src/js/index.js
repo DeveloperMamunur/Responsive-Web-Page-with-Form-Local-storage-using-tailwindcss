@@ -21,25 +21,28 @@ contactForm.addEventListener("submit", function (e) {
     // Name validation
     if (name === '') {
         showError('nameError', 'Name field is required');
+        isValid = false;
     } 
   
     // Email validation
     if (email === '') {
         showError('emailError', 'Email field is required');
+        isValid = false
     }
     
     // Message validation
     if (message === '') {
         showError('messageError', 'Message field is required');
-    } else if (message.length < 10) {
-        showError('messageError', 'Message must be at least 10 characters');
-    }
+        isValid = false
+    } 
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
         showError("Please enter a valid email address.");
+        isValid = false
     }
 
+    // show error message 
     function showError(id, message) {
         const errorElement = document.getElementById(id);
         errorElement.textContent = message;
@@ -47,11 +50,12 @@ contactForm.addEventListener("submit", function (e) {
         document.getElementById(id.replace('Error', '')).classList.add('border-red-500');
     }
 
+    // save form data to local storage 
     const formData = { name, email, message };
-    localStorage.setItem("contactFormData", JSON.stringify(formData));
-
-    document.getElementById("formMsg").classList.remove("hidden");
-    resetErrors()
+    if(isValid == true){
+        localStorage.setItem("contactFormData", JSON.stringify(formData));
+        document.getElementById("formMsg").classList.remove("hidden");
+    }
     // Optional: Reset form
     this.reset();
 });
